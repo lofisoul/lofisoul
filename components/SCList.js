@@ -54,7 +54,8 @@ class SCList extends Component {
         let userArr = usersWhoLiked.collection;
         const arrayUsersFaves = userArr.filter(user=> user.public_favorites_count>0)
         //sort users without playlists
-        const randomUser = shuffle(arrayUsersFaves,1)[0];
+        //TODO::need to figure out a way to filter out user
+        let randomUser = shuffle(arrayUsersFaves,1)[0];
         //get first list of random users
         const userFaves = await SC.get(`/users/${randomUser.id}/favorites`,{
             limit: 1000,

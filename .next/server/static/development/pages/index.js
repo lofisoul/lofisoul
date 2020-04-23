@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -168,8 +168,9 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
       let userArr = usersWhoLiked.collection;
       const arrayUsersFaves = userArr.filter(user => user.public_favorites_count > 0); //sort users without playlists
+      //TODO::need to figure out a way to filter out user
 
-      const randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_3__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+      let randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_3__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
 
       const userFaves = await SC.get(`/users/${randomUser.id}/favorites`, {
         limit: 1000,
@@ -205,7 +206,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82,
+          lineNumber: 83,
           columnNumber: 20
         }
       }, "Fetching...");
@@ -215,7 +216,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 86,
         columnNumber: 13
       }
     }, __jsx("div", {
@@ -226,7 +227,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86,
+        lineNumber: 87,
         columnNumber: 17
       }
     }, fiveTracks ? fiveTracks.map(track => {
@@ -234,7 +235,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88,
+          lineNumber: 89,
           columnNumber: 28
         }
       }, __jsx("p", {
@@ -242,21 +243,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88,
+          lineNumber: 89,
           columnNumber: 33
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88,
+          lineNumber: 89,
           columnNumber: 51
         }
       }, track.user.username), __jsx("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88,
+          lineNumber: 89,
           columnNumber: 89
         }
       }), ": ", track.title), __jsx("iframe", {
@@ -269,7 +270,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89,
+          lineNumber: 90,
           columnNumber: 21
         }
       }));
@@ -277,7 +278,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93,
+        lineNumber: 94,
         columnNumber: 17
       }
     }, randomTracksFromUsers ? randomTracksFromUsers.map(item => {
@@ -286,35 +287,35 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95,
+          lineNumber: 96,
           columnNumber: 28
         }
       }, __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96,
+          lineNumber: 97,
           columnNumber: 25
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96,
+          lineNumber: 97,
           columnNumber: 28
         }
       }, "User:"), " ", item.user.username), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97,
+          lineNumber: 98,
           columnNumber: 25
         }
       }, "Song: ", item.track.title), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98,
+          lineNumber: 99,
           columnNumber: 25
         }
       }, "Referral: ", item.referral.title), __jsx("iframe", {
@@ -323,11 +324,11 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         scrolling: "no",
         frameborder: "no",
         allow: "autoplay",
-        src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${item.id}`,
+        src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${item.track.id}`,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 100,
           columnNumber: 25
         }
       }));
@@ -417,7 +418,7 @@ const Home = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, 
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
