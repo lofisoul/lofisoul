@@ -96,7 +96,7 @@ class SCList extends Component {
                         <p><strong>User:</strong> {item.user.username}</p>
                         <p>Song: {item.track.title}</p>
                         <p>Referral: {item.referral.title}</p>
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${item.id}`}></iframe>
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${item.track.id}`}></iframe>
                     </div>
                 }) : 'Error'}
                 </div>
