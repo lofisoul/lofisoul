@@ -1,20 +1,49 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import FetchUser from './FetchUser';
+import User from './User';
 import {scAppId, scUser} from '../config';
 import {shuffle} from '../lib/utils';
 
 class SCList extends Component {
     state = {
         isFetching: false,
+        doneFetching: false,
         fiveTracks: null,
-        randomTracksFromUsers: null
+        randomTracksFromUsers: null,
+        isModalOpen: true,
+        username: '',
+        user:null,
+        fetchErrorMsg: ''
+    }
+
+    //function to resolve soundcloud user
+    soundCloudResolveUser = async (user) => {
+        try {
+            const userToResolve = await SC.resolve(`https://soundcloud.com/${user}`);
+            this.initTrack(userToResolve);
+            this.setState({user:userToResolve, isModalOpen:false});
+        } catch(e) {
+            const errorMsg = e.status===404 ? `Whoops! That user doesn't exist!` : e.message; 
+            this.setState({fetchErrorMsg: errorMsg});  
+        }
+    }
+
+    //get SC user from form
+    saveToState = e => {
+        this.setState({[e.target.name]:e.target.value})
+    }
+
+    onSubmit = e => {
+        e.preventDefault();
+        this.soundCloudResolveUser(this.state.username);
     }
     
-    initTrack = async () => {
+    initTrack = async (user) => {
         //initialize SC
         this.setState({isFetching:true})
         
-        const response = await SC.get(`/users/${scUser.id}/favorites`,{
+        const response = await SC.get(`/users/${user.id}/favorites`,{
             limit:1000,
             linked_partitioning:1
         })
@@ -30,19 +59,7 @@ class SCList extends Component {
         
         
         
-        this.setState({isFetching:false, fiveTracks:sortedTracks, randomTracksFromUsers: randomPlaylist})
-        const track = response.collection[27];
-        const trackSrc = `${track.stream_url}?client_id=${scAppId}`;
-        this.audio = new Audio();
-        this.audio.crossOrigin = "anonymous";
-        this.audio.src = trackSrc;
-        this.context = new (window.AudioContext || window.webkitAudioContext)();
-        this.source = this.context.createMediaElementSource(this.audio);
-
-        this.analyser = this.context.createAnalyser();
-        this.source.connect(this.analyser);
-        this.analyser.connect(this.context.destination);
-        this.frequency_array = new Uint8Array(this.analyser.frequencyBinCount);        
+        this.setState({isFetching:false, fiveTracks:sortedTracks, randomTracksFromUsers: randomPlaylist}); 
     }
 
     generateRandomPlaylist = async (track) => {
@@ -75,32 +92,35 @@ class SCList extends Component {
             client_id: scAppId,
             redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html'
         });
-        this.initTrack();
+
     }
     render() {
-        const {isFetching, fiveTracks, randomTracksFromUsers} = this.state;
-        if(isFetching) {
-            return <div>Fetching...</div>
-         }
+        const {isFetching, fiveTracks, randomTracksFromUsers, isModalOpen, username, fetchErrorMsg,doneFetching, user} = this.state;
         return (
             <div>
-                <div style={{borderBottom: '1px solid gray', paddingBottom: '20px'}}>
-                {(fiveTracks) ? fiveTracks.map(track=>{
-                    return <div><p key={track.id}><strong>{track.user.username}</strong><br/>: {track.title}</p>
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${track.id}`}></iframe>
-                    </div>
-                }) : ''}
+                <FetchUser onSubmit={this.onSubmit} isModalOpen={isModalOpen} username={username} saveToState={this.saveToState} fetchErrorMsg={fetchErrorMsg} />
+                {(user) ? <User user={user} /> : ''}
+                {isFetching ? (<div>Fetching...</div>) : (
+                <>
+                <div>
+                    {(fiveTracks) ? fiveTracks.map(track=>{
+                        return <div><p key={track.id}><strong>{track.user.username}</strong><br/>: {track.title}</p>
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${track.id}`}></iframe>
+                        </div>
+                    }) : ''}
                 </div>
                 <div>
-                {(randomTracksFromUsers) ? randomTracksFromUsers.map(item=>{
-                    return <div key={item.track.id}>
-                        <p><strong>User:</strong> {item.user.username}</p>
-                        <p>Song: {item.track.title}</p>
-                        <p>Referral: {item.referral.title}</p>
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${item.track.id}`}></iframe>
-                    </div>
-                }) : 'Error'}
+                    {(randomTracksFromUsers) ? randomTracksFromUsers.map(item=>{
+                        return <div key={item.track.id}>
+                            <p><strong>User:</strong> {item.user.username}</p>
+                            <p>Song: {item.track.title}</p>
+                            <p>Referral: {item.referral.title}</p>
+                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${item.track.id}`}></iframe>
+                        </div>
+                    }) : ''}
                 </div>
+                </>
+                )}
             </div>
         )
     }

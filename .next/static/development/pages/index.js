@@ -1,5 +1,116 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/FetchUser.js":
+/*!*********************************!*\
+  !*** ./components/FetchUser.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/Form */ "./components/styles/Form.js");
+/* harmony import */ var _styles_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/Modal */ "./components/styles/Modal.js");
+var _this = undefined,
+    _jsxFileName = "/Users/jasonnolfi/lofisoul/components/FetchUser.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+var FetchUser = function FetchUser(props) {
+  return __jsx(_styles_Modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    isModalOpen: props.isModalOpen,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "modal-dialog",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "modal-content",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: "error-msg",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 21
+    }
+  }, props.fetchErrorMsg), __jsx(_styles_Form__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    onSubmit: props.onSubmit,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 21
+    }
+  }, __jsx("fieldset", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 25
+    }
+  }, __jsx("h2", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 29
+    }
+  }, "Setup Your Experience"), __jsx("label", {
+    htmlFor: "username",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 29
+    }
+  }, "Enter A Username", __jsx("input", {
+    type: "text",
+    name: "username",
+    value: props.username,
+    placeholder: "",
+    onChange: props.saveToState,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 33
+    }
+  }))), __jsx("button", {
+    type: "submit",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 25
+    }
+  }, "Launch \uD83D\uDE80")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FetchUser);
+
+/***/ }),
+
 /***/ "./components/SCList.js":
 /*!******************************!*\
   !*** ./components/SCList.js ***!
@@ -21,8 +132,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
+/* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
 
 
 
@@ -37,6 +150,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 function _createSuper(Derived) { return function () { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
 
 
 
@@ -61,55 +176,110 @@ var SCList = /*#__PURE__*/function (_Component) {
 
     Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "state", {
       isFetching: false,
+      doneFetching: false,
       fiveTracks: null,
-      randomTracksFromUsers: null
+      randomTracksFromUsers: null,
+      isModalOpen: true,
+      username: '',
+      user: null,
+      fetchErrorMsg: ''
     });
 
-    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "initTrack", function _callee2() {
-      var response, sortedTracks, randomPlaylist, track, trackSrc;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee2$(_context2) {
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "soundCloudResolveUser", function _callee(user) {
+      var userToResolve, errorMsg;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
         while (1) {
-          switch (_context2.prev = _context2.next) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.prev = 0;
+              _context.next = 3;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.resolve("https://soundcloud.com/".concat(user)));
+
+            case 3:
+              userToResolve = _context.sent;
+
+              _this.initTrack(userToResolve);
+
+              _this.setState({
+                user: userToResolve,
+                isModalOpen: false
+              });
+
+              _context.next = 12;
+              break;
+
+            case 8:
+              _context.prev = 8;
+              _context.t0 = _context["catch"](0);
+              errorMsg = _context.t0.status === 404 ? "Whoops! That user doesn't exist!" : _context.t0.message;
+
+              _this.setState({
+                fetchErrorMsg: errorMsg
+              });
+
+            case 12:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, null, null, [[0, 8]], Promise);
+    });
+
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "saveToState", function (e) {
+      _this.setState(Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])({}, e.target.name, e.target.value));
+    });
+
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "onSubmit", function (e) {
+      e.preventDefault();
+
+      _this.soundCloudResolveUser(_this.state.username);
+    });
+
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "initTrack", function _callee3(user) {
+      var response, sortedTracks, randomPlaylist;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
             case 0:
               //initialize SC
               _this.setState({
                 isFetching: true
               });
 
-              _context2.next = 3;
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(_config__WEBPACK_IMPORTED_MODULE_10__["scUser"].id, "/favorites"), {
+              _context3.next = 3;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(user.id, "/favorites"), {
                 limit: 1000,
                 linked_partitioning: 1
               }));
 
             case 3:
-              response = _context2.sent;
-              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_11__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
+              response = _context3.sent;
+              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
 
-              _context2.next = 7;
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Promise.all(sortedTracks.map(function _callee(item) {
+              _context3.next = 7;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Promise.all(sortedTracks.map(function _callee2(item) {
                 var newItem;
-                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
+                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee2$(_context2) {
                   while (1) {
-                    switch (_context.prev = _context.next) {
+                    switch (_context2.prev = _context2.next) {
                       case 0:
-                        _context.next = 2;
+                        _context2.next = 2;
                         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(_this.generateRandomPlaylist(item));
 
                       case 2:
-                        newItem = _context.sent;
-                        return _context.abrupt("return", newItem);
+                        newItem = _context2.sent;
+                        return _context2.abrupt("return", newItem);
 
                       case 4:
                       case "end":
-                        return _context.stop();
+                        return _context2.stop();
                     }
                   }
                 }, null, null, null, Promise);
               })));
 
             case 7:
-              randomPlaylist = _context2.sent;
+              randomPlaylist = _context3.sent;
 
               _this.setState({
                 isFetching: false,
@@ -117,68 +287,7 @@ var SCList = /*#__PURE__*/function (_Component) {
                 randomTracksFromUsers: randomPlaylist
               });
 
-              track = response.collection[27];
-              trackSrc = "".concat(track.stream_url, "?client_id=").concat(_config__WEBPACK_IMPORTED_MODULE_10__["scAppId"]);
-              _this.audio = new Audio();
-              _this.audio.crossOrigin = "anonymous";
-              _this.audio.src = trackSrc;
-              _this.context = new (window.AudioContext || window.webkitAudioContext)();
-              _this.source = _this.context.createMediaElementSource(_this.audio);
-              _this.analyser = _this.context.createAnalyser();
-
-              _this.source.connect(_this.analyser);
-
-              _this.analyser.connect(_this.context.destination);
-
-              _this.frequency_array = new Uint8Array(_this.analyser.frequencyBinCount);
-
-            case 20:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, null, null, null, Promise);
-    });
-
-    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "generateRandomPlaylist", function _callee3(track) {
-      var usersWhoLiked, userArr, arrayUsersFaves, randomUser, userFaves, randomTrack, randomObj;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee3$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              _context3.next = 2;
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/tracks/".concat(track.id, "/favoriters"), {
-                limit: 1000,
-                linked_partitioning: 1
-              }));
-
-            case 2:
-              usersWhoLiked = _context3.sent;
-              userArr = usersWhoLiked.collection;
-              arrayUsersFaves = userArr.filter(function (user) {
-                return user.public_favorites_count > 0;
-              }); //sort users without playlists
-              //TODO::need to figure out a way to filter out user
-
-              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_11__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
-
-              _context3.next = 8;
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(randomUser.id, "/favorites"), {
-                limit: 1000,
-                linked_partitioning: 1
-              }));
-
-            case 8:
-              userFaves = _context3.sent;
-              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_11__["shuffle"])(userFaves.collection, 1)[0];
-              randomObj = {
-                referral: track,
-                user: randomUser,
-                track: randomTrack
-              };
-              return _context3.abrupt("return", randomObj);
-
-            case 12:
+            case 9:
             case "end":
               return _context3.stop();
           }
@@ -186,13 +295,57 @@ var SCList = /*#__PURE__*/function (_Component) {
       }, null, null, null, Promise);
     });
 
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "generateRandomPlaylist", function _callee4(track) {
+      var usersWhoLiked, userArr, arrayUsersFaves, randomUser, userFaves, randomTrack, randomObj;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              _context4.next = 2;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/tracks/".concat(track.id, "/favoriters"), {
+                limit: 1000,
+                linked_partitioning: 1
+              }));
+
+            case 2:
+              usersWhoLiked = _context4.sent;
+              userArr = usersWhoLiked.collection;
+              arrayUsersFaves = userArr.filter(function (user) {
+                return user.public_favorites_count > 0;
+              }); //sort users without playlists
+              //TODO::need to figure out a way to filter out user
+
+              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+
+              _context4.next = 8;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(randomUser.id, "/favorites"), {
+                limit: 1000,
+                linked_partitioning: 1
+              }));
+
+            case 8:
+              userFaves = _context4.sent;
+              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(userFaves.collection, 1)[0];
+              randomObj = {
+                referral: track,
+                user: randomUser,
+                track: randomTrack
+              };
+              return _context4.abrupt("return", randomObj);
+
+            case 12:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, null, null, null, Promise);
+    });
+
     Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "componentDidMount", function () {
       SC.initialize({
-        client_id: _config__WEBPACK_IMPORTED_MODULE_10__["scAppId"],
+        client_id: _config__WEBPACK_IMPORTED_MODULE_12__["scAppId"],
         redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html'
       });
-
-      _this.initTrack();
     });
 
     return _this;
@@ -206,35 +359,51 @@ var SCList = /*#__PURE__*/function (_Component) {
       var _this$state = this.state,
           isFetching = _this$state.isFetching,
           fiveTracks = _this$state.fiveTracks,
-          randomTracksFromUsers = _this$state.randomTracksFromUsers;
-
-      if (isFetching) {
-        return __jsx("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 83,
-            columnNumber: 20
-          }
-        }, "Fetching...");
-      }
-
+          randomTracksFromUsers = _this$state.randomTracksFromUsers,
+          isModalOpen = _this$state.isModalOpen,
+          username = _this$state.username,
+          fetchErrorMsg = _this$state.fetchErrorMsg,
+          doneFetching = _this$state.doneFetching,
+          user = _this$state.user;
       return __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86,
+          lineNumber: 100,
           columnNumber: 13
         }
-      }, __jsx("div", {
-        style: {
-          borderBottom: '1px solid gray',
-          paddingBottom: '20px'
-        },
+      }, __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        onSubmit: this.onSubmit,
+        isModalOpen: isModalOpen,
+        username: username,
+        saveToState: this.saveToState,
+        fetchErrorMsg: fetchErrorMsg,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87,
+          lineNumber: 101,
+          columnNumber: 17
+        }
+      }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        user: user,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102,
+          columnNumber: 27
+        }
+      }) : '', isFetching ? __jsx("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103,
+          columnNumber: 32
+        }
+      }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, __jsx("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105,
           columnNumber: 17
         }
       }, fiveTracks ? fiveTracks.map(function (track) {
@@ -242,30 +411,30 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
-            columnNumber: 28
+            lineNumber: 107,
+            columnNumber: 32
           }
         }, __jsx("p", {
           key: track.id,
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
-            columnNumber: 33
+            lineNumber: 107,
+            columnNumber: 37
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
-            columnNumber: 51
+            lineNumber: 107,
+            columnNumber: 55
           }
         }, track.user.username), __jsx("br", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
-            columnNumber: 89
+            lineNumber: 107,
+            columnNumber: 93
           }
         }), ": ", track.title), __jsx("iframe", {
           width: "100%",
@@ -277,15 +446,15 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90,
-            columnNumber: 21
+            lineNumber: 108,
+            columnNumber: 25
           }
         }));
       }) : ''), __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94,
+          lineNumber: 112,
           columnNumber: 17
         }
       }, randomTracksFromUsers ? randomTracksFromUsers.map(function (item) {
@@ -294,36 +463,36 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 96,
-            columnNumber: 28
+            lineNumber: 114,
+            columnNumber: 32
           }
         }, __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97,
-            columnNumber: 25
+            lineNumber: 115,
+            columnNumber: 29
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97,
-            columnNumber: 28
+            lineNumber: 115,
+            columnNumber: 32
           }
         }, "User:"), " ", item.user.username), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98,
-            columnNumber: 25
+            lineNumber: 116,
+            columnNumber: 29
           }
         }, "Song: ", item.track.title), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99,
-            columnNumber: 25
+            lineNumber: 117,
+            columnNumber: 29
           }
         }, "Referral: ", item.referral.title), __jsx("iframe", {
           width: "100%",
@@ -335,11 +504,11 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100,
-            columnNumber: 25
+            lineNumber: 118,
+            columnNumber: 29
           }
         }));
-      }) : 'Error'));
+      }) : '')));
     }
   }]);
 
@@ -347,6 +516,129 @@ var SCList = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (SCList);
+
+/***/ }),
+
+/***/ "./components/User.js":
+/*!****************************!*\
+  !*** ./components/User.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+var _this = undefined,
+    _jsxFileName = "/Users/jasonnolfi/lofisoul/components/User.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\nheight:40px;\nmargin-left:2rem;\nborder-radius:50%;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\ndisplay:flex;\nalign-items:center;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+var UserWrap = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var UserImage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject2());
+
+var User = function User(props) {
+  return __jsx(UserWrap, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 9
+    }
+  }, __jsx("h1", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, "Welcome, ", props.user.username), __jsx(UserImage, {
+    src: props.user.avatar_url,
+    alt: props.user.username,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (User);
+
+/***/ }),
+
+/***/ "./components/styles/Form.js":
+/*!***********************************!*\
+  !*** ./components/styles/Form.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+var loading = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["from{background-position:0 0;}to{background-position:100% 100%;}"]);
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].form.withConfig({
+  displayName: "Form",
+  componentId: "sc-1krt96e-0"
+})(["box-shadow:0 0 5px 3px rgba(0,0,0,0.05);background:rgba(0,0,0,0.02);border:5px solid white;padding:20px;font-size:1.5rem;line-height:1.5;font-weight:600;label{display:block;margin-bottom:1rem;}input,textarea,select{width:100%;padding:0.5rem;font-size:1rem;border:1px solid black;&:focus{outline:0;border-color:", ";}}button,input[type='submit']{width:auto;background:red;color:white;border:0;font-size:2rem;font-weight:600;padding:0.5rem 1.2rem;}fieldset{border:0;padding:0;&[disabled]{opacity:0.5;}&::before{height:10px;content:'';display:block;background-image:linear-gradient(to right,#ff3019 0%,#e2b04a 50%,#ff3019 100%);}&[aria-busy='true']::before{background-size:50% auto;animation:", " 0.5s linear infinite;}}"], function (props) {
+  return props.theme.red;
+}, loading);
+/* harmony default export */ __webpack_exports__["default"] = (Form);
+
+/***/ }),
+
+/***/ "./components/styles/Modal.js":
+/*!************************************!*\
+  !*** ./components/styles/Modal.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+var Modal = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "Modal",
+  componentId: "ubqnco-0"
+})(["position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);opacity:", ";visibility:", ";transform:", ";transition:visibility 0s linear 0.25s,opacity 0.25s 0s,transform 0.25s;.modal-dialog{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:400px;width:100%;}.modal-content{position:relative;width:100%;pointer-events:auto;background-color:#fff;outline:0;max-width:400px;padding:3rem 2rem;}"], function (props) {
+  return props.isModalOpen ? 1 : 0;
+}, function (props) {
+  return props.isModalOpen ? 'visible' : 'hidden';
+}, function (props) {
+  return props.isModalOpen ? "scale(1)" : "scale(1.1)";
+});
+/* harmony default export */ __webpack_exports__["default"] = (Modal);
 
 /***/ }),
 
@@ -579,6 +871,30 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _taggedTemplateLiteral; });
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
 }
 
 /***/ }),
@@ -4755,7 +5071,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjasonnolfi%2Flofisoul%2Fpages%2Findex.js ***!
   \********************************************************************************************************************/
@@ -4778,5 +5094,5 @@ module.exports = dll_c2e10d183b950a67d9e7;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

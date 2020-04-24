@@ -41,32 +41,17 @@ const GlobalStyle = createGlobalStyle`
     *,*:before, *:after {
         box-sizing: inherit;
     }
+
+    h1,h2,h3,h4,h5,h6 {margin:0;}
+
     body {
         padding:0;
         margin:0;
         font-size:1.5rem;
         line-height:2;
+        background-color:${props=>props.theme.offWhite};
         color:${props=>props.theme.black};
         font-family:'Fira Sans', sans-serif;
-    }
-
-    body.start-warmup {
-        background-color:${props=>props.theme.yellow};
-    }
-
-    body.start-work {
-        background-color:${props=>props.theme.greenLight};
-        color:#fff;
-    }
-
-    body.start-cooldown {
-        background-color:${props=>props.theme.sky};
-        color:#fff;
-    }
-
-    body.end-session {
-        background-color:${props=>props.theme.red};
-        color:#fff;
     }
 
     a {
@@ -83,8 +68,8 @@ class Page extends Component {
                 <StyledPage>
                     <Meta />
                     <GlobalStyle />
-                    <Inner>
                     <Header />
+                    <Inner>                    
                         {this.props.children}
                     </Inner>
                 </StyledPage>
