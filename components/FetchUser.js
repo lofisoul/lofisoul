@@ -1,13 +1,14 @@
 import React from 'react';
 import Form from './styles/Form';
 import Modal from './styles/Modal';
+import Error from './Error.js';
 
 const FetchUser = (props) => {
     return (
         <Modal isModalOpen={props.isModalOpen}>
             <div className="modal-dialog">
                 <div className="modal-content">
-                    <div className="error-msg">{props.fetchErrorMsg}</div>
+                    <Error>{props.fetchErrorMsg}</Error>
                     <Form onSubmit={props.onSubmit}>
                         <fieldset>
                             <h2>Setup Your Experience</h2>

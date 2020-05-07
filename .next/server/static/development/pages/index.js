@@ -88,10 +88,40 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/Error.js":
+/*!*****************************!*\
+  !*** ./components/Error.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/jasonnolfi/lofisoul/components/Error.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Error = props => {
+  return __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 9
+    }
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Error);
+
+/***/ }),
 
 /***/ "./components/FetchUser.js":
 /*!*********************************!*\
@@ -106,8 +136,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/Form */ "./components/styles/Form.js");
 /* harmony import */ var _styles_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/Modal */ "./components/styles/Modal.js");
+/* harmony import */ var _Error_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Error.js */ "./components/Error.js");
 var _jsxFileName = "/Users/jasonnolfi/lofisoul/components/FetchUser.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -118,7 +150,7 @@ const FetchUser = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -126,7 +158,7 @@ const FetchUser = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 9,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -134,15 +166,14 @@ const FetchUser = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 10,
       columnNumber: 17
     }
-  }, __jsx("div", {
-    className: "error-msg",
+  }, __jsx(_Error_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 11,
       columnNumber: 21
     }
   }, props.fetchErrorMsg), __jsx(_styles_Form__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -150,21 +181,21 @@ const FetchUser = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 12,
       columnNumber: 21
     }
   }, __jsx("fieldset", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 25
     }
   }, __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 14,
       columnNumber: 29
     }
   }, "Setup Your Experience"), __jsx("label", {
@@ -172,7 +203,7 @@ const FetchUser = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 15,
       columnNumber: 29
     }
   }, "Enter A Username", __jsx("input", {
@@ -184,7 +215,7 @@ const FetchUser = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 33
     }
   }))), __jsx("button", {
@@ -192,7 +223,7 @@ const FetchUser = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 25
     }
   }, "Launch \uD83D\uDE80")))));
@@ -215,14 +246,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
-/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
+/* harmony import */ var _SCPlayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SCPlayer */ "./components/SCPlayer.js");
+/* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
 var _jsxFileName = "/Users/jasonnolfi/lofisoul/components/SCList.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -243,12 +276,26 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       isModalOpen: true,
       username: '',
       user: null,
-      fetchErrorMsg: ''
+      fetchErrorMsg: '',
+      currentTrack: '',
+      tracks: null
     });
 
     _defineProperty(this, "soundCloudResolveUser", async user => {
       try {
         const userToResolve = await SC.resolve(`https://soundcloud.com/${user}`);
+        const response = await SC.get(`/users/${userToResolve.id}/favorites`, {
+          limit: 1000,
+          linked_partitioning: 1
+        });
+
+        if (response.collection.length < 5) {
+          this.setState({
+            fetchErrorMsg: `You don't have enough likes. Try favoriting some tracks on soundcloud!`
+          });
+          return;
+        }
+
         this.initTrack(userToResolve);
         this.setState({
           user: userToResolve,
@@ -282,7 +329,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         limit: 1000,
         linked_partitioning: 1
       });
-      const sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
+      const sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
 
       let randomPlaylist = await Promise.all(sortedTracks.map(async item => {
         let newItem = await this.generateRandomPlaylist(item);
@@ -304,13 +351,13 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       const arrayUsersFaves = userArr.filter(user => user.public_favorites_count > 0); //sort users without playlists
       //TODO::need to figure out a way to filter out user
 
-      let randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+      let randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
 
       const userFaves = await SC.get(`/users/${randomUser.id}/favorites`, {
         limit: 1000,
         linked_partitioning: 1
       });
-      const randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(userFaves.collection, 1)[0];
+      const randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(userFaves.collection, 1)[0];
       const randomObj = {
         referral: track,
         user: randomUser,
@@ -321,7 +368,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "componentDidMount", () => {
       SC.initialize({
-        client_id: _config__WEBPACK_IMPORTED_MODULE_4__["scAppId"],
+        client_id: _config__WEBPACK_IMPORTED_MODULE_5__["scAppId"],
         redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html'
       });
     });
@@ -338,14 +385,15 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       doneFetching,
       user
     } = this.state;
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, fiveTracks && __jsx(_SCPlayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      currentTrack: fiveTracks[0],
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100,
-        columnNumber: 13
+        lineNumber: 113,
+        columnNumber: 34
       }
-    }, __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_3__["default"], {
       onSubmit: this.onSubmit,
       isModalOpen: isModalOpen,
       username: username,
@@ -354,29 +402,29 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101,
+        lineNumber: 114,
         columnNumber: 17
       }
-    }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_4__["default"], {
       user: user,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102,
+        lineNumber: 115,
         columnNumber: 27
       }
     }) : '', isFetching ? __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103,
+        lineNumber: 116,
         columnNumber: 32
       }
     }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105,
+        lineNumber: 118,
         columnNumber: 17
       }
     }, fiveTracks ? fiveTracks.map(track => {
@@ -384,7 +432,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 120,
           columnNumber: 32
         }
       }, __jsx("p", {
@@ -392,21 +440,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 120,
           columnNumber: 37
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 120,
           columnNumber: 55
         }
       }, track.user.username), __jsx("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 120,
           columnNumber: 93
         }
       }), ": ", track.title), __jsx("iframe", {
@@ -419,7 +467,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108,
+          lineNumber: 121,
           columnNumber: 25
         }
       }));
@@ -427,7 +475,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112,
+        lineNumber: 125,
         columnNumber: 17
       }
     }, randomTracksFromUsers ? randomTracksFromUsers.map(item => {
@@ -436,35 +484,35 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114,
+          lineNumber: 127,
           columnNumber: 32
         }
       }, __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115,
+          lineNumber: 128,
           columnNumber: 29
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115,
+          lineNumber: 128,
           columnNumber: 32
         }
       }, "User:"), " ", item.user.username), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116,
+          lineNumber: 129,
           columnNumber: 29
         }
       }, "Song: ", item.track.title), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117,
+          lineNumber: 130,
           columnNumber: 29
         }
       }, "Referral: ", item.referral.title), __jsx("iframe", {
@@ -477,7 +525,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118,
+          lineNumber: 131,
           columnNumber: 29
         }
       }));
@@ -487,6 +535,38 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (SCList);
+
+/***/ }),
+
+/***/ "./components/SCPlayer.js":
+/*!********************************!*\
+  !*** ./components/SCPlayer.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/jasonnolfi/lofisoul/components/SCPlayer.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const SCPlayer = ({
+  currentTrack
+}) => {
+  return __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 9
+    }
+  }, currentTrack.title);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SCPlayer);
 
 /***/ }),
 
@@ -666,7 +746,7 @@ const Home = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, 
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

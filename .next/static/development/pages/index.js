@@ -1,5 +1,37 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/Error.js":
+/*!*****************************!*\
+  !*** ./components/Error.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _this = undefined,
+    _jsxFileName = "/Users/jasonnolfi/lofisoul/components/Error.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var Error = function Error(props) {
+  return __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 9
+    }
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Error);
+
+/***/ }),
+
 /***/ "./components/FetchUser.js":
 /*!*********************************!*\
   !*** ./components/FetchUser.js ***!
@@ -13,10 +45,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/Form */ "./components/styles/Form.js");
 /* harmony import */ var _styles_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/Modal */ "./components/styles/Modal.js");
+/* harmony import */ var _Error_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Error.js */ "./components/Error.js");
 var _this = undefined,
     _jsxFileName = "/Users/jasonnolfi/lofisoul/components/FetchUser.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -27,7 +61,7 @@ var FetchUser = function FetchUser(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -35,7 +69,7 @@ var FetchUser = function FetchUser(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 9,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -43,15 +77,14 @@ var FetchUser = function FetchUser(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 10,
       columnNumber: 17
     }
-  }, __jsx("div", {
-    className: "error-msg",
+  }, __jsx(_Error_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 11,
       columnNumber: 21
     }
   }, props.fetchErrorMsg), __jsx(_styles_Form__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -59,21 +92,21 @@ var FetchUser = function FetchUser(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 12,
       columnNumber: 21
     }
   }, __jsx("fieldset", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 25
     }
   }, __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 14,
       columnNumber: 29
     }
   }, "Setup Your Experience"), __jsx("label", {
@@ -81,7 +114,7 @@ var FetchUser = function FetchUser(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 15,
       columnNumber: 29
     }
   }, "Enter A Username", __jsx("input", {
@@ -93,7 +126,7 @@ var FetchUser = function FetchUser(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 33
     }
   }))), __jsx("button", {
@@ -101,7 +134,7 @@ var FetchUser = function FetchUser(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 25
     }
   }, "Launch \uD83D\uDE80")))));
@@ -132,10 +165,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
-/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
+/* harmony import */ var _SCPlayer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SCPlayer */ "./components/SCPlayer.js");
+/* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
 
 
 
@@ -150,6 +184,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 function _createSuper(Derived) { return function () { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -182,11 +217,13 @@ var SCList = /*#__PURE__*/function (_Component) {
       isModalOpen: true,
       username: '',
       user: null,
-      fetchErrorMsg: ''
+      fetchErrorMsg: '',
+      currentTrack: '',
+      tracks: null
     });
 
     Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "soundCloudResolveUser", function _callee(user) {
-      var userToResolve, errorMsg;
+      var userToResolve, response, errorMsg;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -197,7 +234,27 @@ var SCList = /*#__PURE__*/function (_Component) {
 
             case 3:
               userToResolve = _context.sent;
+              _context.next = 6;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(userToResolve.id, "/favorites"), {
+                limit: 1000,
+                linked_partitioning: 1
+              }));
 
+            case 6:
+              response = _context.sent;
+
+              if (!(response.collection.length < 5)) {
+                _context.next = 10;
+                break;
+              }
+
+              _this.setState({
+                fetchErrorMsg: "You don't have enough likes. Try favoriting some tracks on soundcloud!"
+              });
+
+              return _context.abrupt("return");
+
+            case 10:
               _this.initTrack(userToResolve);
 
               _this.setState({
@@ -205,11 +262,11 @@ var SCList = /*#__PURE__*/function (_Component) {
                 isModalOpen: false
               });
 
-              _context.next = 12;
+              _context.next = 18;
               break;
 
-            case 8:
-              _context.prev = 8;
+            case 14:
+              _context.prev = 14;
               _context.t0 = _context["catch"](0);
               errorMsg = _context.t0.status === 404 ? "Whoops! That user doesn't exist!" : _context.t0.message;
 
@@ -217,12 +274,12 @@ var SCList = /*#__PURE__*/function (_Component) {
                 fetchErrorMsg: errorMsg
               });
 
-            case 12:
+            case 18:
             case "end":
               return _context.stop();
           }
         }
-      }, null, null, [[0, 8]], Promise);
+      }, null, null, [[0, 14]], Promise);
     });
 
     Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "saveToState", function (e) {
@@ -254,7 +311,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
             case 3:
               response = _context3.sent;
-              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
+              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
 
               _context3.next = 7;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Promise.all(sortedTracks.map(function _callee2(item) {
@@ -315,7 +372,7 @@ var SCList = /*#__PURE__*/function (_Component) {
               }); //sort users without playlists
               //TODO::need to figure out a way to filter out user
 
-              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
 
               _context4.next = 8;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(randomUser.id, "/favorites"), {
@@ -325,7 +382,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
             case 8:
               userFaves = _context4.sent;
-              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(userFaves.collection, 1)[0];
+              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(userFaves.collection, 1)[0];
               randomObj = {
                 referral: track,
                 user: randomUser,
@@ -343,7 +400,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
     Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "componentDidMount", function () {
       SC.initialize({
-        client_id: _config__WEBPACK_IMPORTED_MODULE_12__["scAppId"],
+        client_id: _config__WEBPACK_IMPORTED_MODULE_13__["scAppId"],
         redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html'
       });
     });
@@ -365,14 +422,15 @@ var SCList = /*#__PURE__*/function (_Component) {
           fetchErrorMsg = _this$state.fetchErrorMsg,
           doneFetching = _this$state.doneFetching,
           user = _this$state.user;
-      return __jsx("div", {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, fiveTracks && __jsx(_SCPlayer__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        currentTrack: fiveTracks[0],
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100,
-          columnNumber: 13
+          lineNumber: 113,
+          columnNumber: 34
         }
-      }, __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_11__["default"], {
         onSubmit: this.onSubmit,
         isModalOpen: isModalOpen,
         username: username,
@@ -381,29 +439,29 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101,
+          lineNumber: 114,
           columnNumber: 17
         }
-      }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_12__["default"], {
         user: user,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102,
+          lineNumber: 115,
           columnNumber: 27
         }
       }) : '', isFetching ? __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103,
+          lineNumber: 116,
           columnNumber: 32
         }
       }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105,
+          lineNumber: 118,
           columnNumber: 17
         }
       }, fiveTracks ? fiveTracks.map(function (track) {
@@ -411,7 +469,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 120,
             columnNumber: 32
           }
         }, __jsx("p", {
@@ -419,21 +477,21 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 120,
             columnNumber: 37
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 120,
             columnNumber: 55
           }
         }, track.user.username), __jsx("br", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 120,
             columnNumber: 93
           }
         }), ": ", track.title), __jsx("iframe", {
@@ -446,7 +504,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 108,
+            lineNumber: 121,
             columnNumber: 25
           }
         }));
@@ -454,7 +512,7 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112,
+          lineNumber: 125,
           columnNumber: 17
         }
       }, randomTracksFromUsers ? randomTracksFromUsers.map(function (item) {
@@ -463,35 +521,35 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114,
+            lineNumber: 127,
             columnNumber: 32
           }
         }, __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115,
+            lineNumber: 128,
             columnNumber: 29
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115,
+            lineNumber: 128,
             columnNumber: 32
           }
         }, "User:"), " ", item.user.username), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 116,
+            lineNumber: 129,
             columnNumber: 29
           }
         }, "Song: ", item.track.title), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117,
+            lineNumber: 130,
             columnNumber: 29
           }
         }, "Referral: ", item.referral.title), __jsx("iframe", {
@@ -504,7 +562,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118,
+            lineNumber: 131,
             columnNumber: 29
           }
         }));
@@ -516,6 +574,39 @@ var SCList = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (SCList);
+
+/***/ }),
+
+/***/ "./components/SCPlayer.js":
+/*!********************************!*\
+  !*** ./components/SCPlayer.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _this = undefined,
+    _jsxFileName = "/Users/jasonnolfi/lofisoul/components/SCPlayer.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var SCPlayer = function SCPlayer(_ref) {
+  var currentTrack = _ref.currentTrack;
+  return __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 9
+    }
+  }, currentTrack.title);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SCPlayer);
 
 /***/ }),
 
@@ -2272,12 +2363,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_c2e10d183b950a67d9e7 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_2adc2403d89adc16ead0 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_c2e10d183b950a67d9e7 */ "dll-reference dll_c2e10d183b950a67d9e7"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -5071,7 +5162,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjasonnolfi%2Flofisoul%2Fpages%2Findex.js ***!
   \********************************************************************************************************************/
@@ -5083,16 +5174,16 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absol
 
 /***/ }),
 
-/***/ "dll-reference dll_c2e10d183b950a67d9e7":
+/***/ "dll-reference dll_2adc2403d89adc16ead0":
 /*!*******************************************!*\
-  !*** external "dll_c2e10d183b950a67d9e7" ***!
+  !*** external "dll_2adc2403d89adc16ead0" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_c2e10d183b950a67d9e7;
+module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

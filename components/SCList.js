@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import SCPlayer from './SCPlayer'
 import FetchUser from './FetchUser';
 import User from './User';
 import {scAppId, scUser} from '../config';
@@ -14,13 +15,24 @@ class SCList extends Component {
         isModalOpen: true,
         username: '',
         user:null,
-        fetchErrorMsg: ''
+        fetchErrorMsg: '',
+        currentTrack: '',
+        tracks: null,
     }
 
     //function to resolve soundcloud user
     soundCloudResolveUser = async (user) => {
         try {
             const userToResolve = await SC.resolve(`https://soundcloud.com/${user}`);
+            const response = await SC.get(`/users/${userToResolve.id}/favorites`,{
+                limit:1000,
+                linked_partitioning:1
+            })
+
+            if(response.collection.length<5) {
+                this.setState({fetchErrorMsg: `You don't have enough likes. Try favoriting some tracks on soundcloud!`});
+                return
+            }
             this.initTrack(userToResolve);
             this.setState({user:userToResolve, isModalOpen:false});
         } catch(e) {
@@ -97,7 +109,8 @@ class SCList extends Component {
     render() {
         const {isFetching, fiveTracks, randomTracksFromUsers, isModalOpen, username, fetchErrorMsg,doneFetching, user} = this.state;
         return (
-            <div>
+            <>
+                {(fiveTracks) && <SCPlayer currentTrack={fiveTracks[0]} />}
                 <FetchUser onSubmit={this.onSubmit} isModalOpen={isModalOpen} username={username} saveToState={this.saveToState} fetchErrorMsg={fetchErrorMsg} />
                 {(user) ? <User user={user} /> : ''}
                 {isFetching ? (<div>Fetching...</div>) : (
@@ -121,7 +134,7 @@ class SCList extends Component {
                 </div>
                 </>
                 )}
-            </div>
+            </>
         )
     }
 }
