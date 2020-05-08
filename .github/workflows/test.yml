@@ -13,7 +13,7 @@ jobs:
               run: yarn test --watchAll=false
             - name: E2E Tests
               uses: cypress-io/github-action@v1
-              secrets: ['SC_ID']
               with:
                   start: yarn dev
+                  env: ${{secrets.SC_ID}}
                   wait-on: 'http://localhost:3000'
