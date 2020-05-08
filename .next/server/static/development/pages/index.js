@@ -249,13 +249,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SCPlayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SCPlayer */ "./components/SCPlayer.js");
 /* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _sc_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../sc-config */ "./sc-config.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
 var _jsxFileName = "/Users/jasonnolfi/lofisoul/components/SCList.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -316,7 +314,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         limit: 1000,
         linked_partitioning: 1
       });
-      const sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
+      const sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
 
       let randomPlaylist = await Promise.all(sortedTracks.map(async item => {
         let newItem = await this.generateRandomPlaylist(item);
@@ -338,13 +336,13 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       const arrayUsersFaves = userArr.filter(user => user.public_favorites_count > 0); //sort users without playlists
       //TODO::need to figure out a way to filter out user
 
-      let randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+      let randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
 
       const userFaves = await SC.get(`/users/${randomUser.id}/favorites`, {
         limit: 1000,
         linked_partitioning: 1
       });
-      const randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(userFaves.collection, 1)[0];
+      const randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(userFaves.collection, 1)[0];
       const randomObj = {
         referral: track,
         user: randomUser,
@@ -392,7 +390,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140,
+        lineNumber: 139,
         columnNumber: 20
       }
     }), __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -404,7 +402,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141,
+        lineNumber: 140,
         columnNumber: 5
       }
     }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -412,21 +410,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148,
+        lineNumber: 147,
         columnNumber: 13
       }
     }) : '', isFetching ? __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150,
+        lineNumber: 149,
         columnNumber: 6
       }
     }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153,
+        lineNumber: 152,
         columnNumber: 7
       }
     }, fiveTracks ? fiveTracks.map(track => {
@@ -434,7 +432,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157,
+          lineNumber: 156,
           columnNumber: 12
         }
       }, __jsx("p", {
@@ -442,21 +440,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158,
+          lineNumber: 157,
           columnNumber: 13
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159,
+          lineNumber: 158,
           columnNumber: 14
         }
       }, track.user.username), __jsx("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162,
+          lineNumber: 161,
           columnNumber: 14
         }
       }), ": ", track.title), __jsx("iframe", {
@@ -469,7 +467,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164,
+          lineNumber: 163,
           columnNumber: 13
         }
       }));
@@ -477,7 +475,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 177,
+        lineNumber: 176,
         columnNumber: 7
       }
     }, randomTracksFromUsers ? randomTracksFromUsers.map(item => {
@@ -486,35 +484,35 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181,
+          lineNumber: 180,
           columnNumber: 12
         }
       }, __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182,
+          lineNumber: 181,
           columnNumber: 13
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183,
+          lineNumber: 182,
           columnNumber: 14
         }
       }, "User:"), ' ', item.user.username), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186,
+          lineNumber: 185,
           columnNumber: 13
         }
       }, "Song: ", item.track.title), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187,
+          lineNumber: 186,
           columnNumber: 13
         }
       }, "Referral:", ' ', item.referral.title), __jsx("iframe", {
@@ -527,7 +525,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191,
+          lineNumber: 190,
           columnNumber: 13
         }
       }));
@@ -726,25 +724,6 @@ const Home = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, 
 }));
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
-
-/***/ }),
-
-/***/ "./sc-config.js":
-/*!**********************!*\
-  !*** ./sc-config.js ***!
-  \**********************/
-/*! exports provided: SC_ID, SC_USER */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SC_ID", function() { return SC_ID; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SC_USER", function() { return SC_USER; });
-const SC_ID = '41aceb0d516e657897a0eb7ab22c9f99';
-const SC_USER = {
-  name: 'lofisoul',
-  id: 63317612
-};
 
 /***/ }),
 

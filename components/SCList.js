@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import SCPlayer from './SCPlayer';
 import FetchUser from './FetchUser';
 import User from './User';
-import {SC_ID} from '../sc-config';
 import {shuffle} from '../lib/utils';
 
 class SCList extends Component {

@@ -168,8 +168,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SCPlayer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SCPlayer */ "./components/SCPlayer.js");
 /* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _sc_config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../sc-config */ "./sc-config.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
 
 
 
@@ -184,7 +183,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 function _createSuper(Derived) { return function () { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
 
 
 
@@ -294,7 +292,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
             case 3:
               response = _context3.sent;
-              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
+              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
 
               _context3.next = 7;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Promise.all(sortedTracks.map(function _callee2(item) {
@@ -355,7 +353,7 @@ var SCList = /*#__PURE__*/function (_Component) {
               }); //sort users without playlists
               //TODO::need to figure out a way to filter out user
 
-              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
 
               _context4.next = 8;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(randomUser.id, "/favorites"), {
@@ -365,7 +363,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
             case 8:
               userFaves = _context4.sent;
-              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(userFaves.collection, 1)[0];
+              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(userFaves.collection, 1)[0];
               randomObj = {
                 referral: track,
                 user: randomUser,
@@ -424,7 +422,7 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140,
+          lineNumber: 139,
           columnNumber: 20
         }
       }), __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -436,7 +434,7 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141,
+          lineNumber: 140,
           columnNumber: 5
         }
       }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -444,21 +442,21 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148,
+          lineNumber: 147,
           columnNumber: 13
         }
       }) : '', isFetching ? __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150,
+          lineNumber: 149,
           columnNumber: 6
         }
       }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153,
+          lineNumber: 152,
           columnNumber: 7
         }
       }, fiveTracks ? fiveTracks.map(function (track) {
@@ -466,7 +464,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 157,
+            lineNumber: 156,
             columnNumber: 12
           }
         }, __jsx("p", {
@@ -474,21 +472,21 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 158,
+            lineNumber: 157,
             columnNumber: 13
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 159,
+            lineNumber: 158,
             columnNumber: 14
           }
         }, track.user.username), __jsx("br", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 162,
+            lineNumber: 161,
             columnNumber: 14
           }
         }), ": ", track.title), __jsx("iframe", {
@@ -501,7 +499,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 164,
+            lineNumber: 163,
             columnNumber: 13
           }
         }));
@@ -509,7 +507,7 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177,
+          lineNumber: 176,
           columnNumber: 7
         }
       }, randomTracksFromUsers ? randomTracksFromUsers.map(function (item) {
@@ -518,35 +516,35 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 181,
+            lineNumber: 180,
             columnNumber: 12
           }
         }, __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 182,
+            lineNumber: 181,
             columnNumber: 13
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 183,
+            lineNumber: 182,
             columnNumber: 14
           }
         }, "User:"), ' ', item.user.username), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 186,
+            lineNumber: 185,
             columnNumber: 13
           }
         }, "Song: ", item.track.title), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 187,
+            lineNumber: 186,
             columnNumber: 13
           }
         }, "Referral:", ' ', item.referral.title), __jsx("iframe", {
@@ -559,7 +557,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 191,
+            lineNumber: 190,
             columnNumber: 13
           }
         }));
@@ -5137,25 +5135,6 @@ var Home = function Home() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
-
-/***/ }),
-
-/***/ "./sc-config.js":
-/*!**********************!*\
-  !*** ./sc-config.js ***!
-  \**********************/
-/*! exports provided: SC_ID, SC_USER */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SC_ID", function() { return SC_ID; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SC_USER", function() { return SC_USER; });
-var SC_ID = '41aceb0d516e657897a0eb7ab22c9f99';
-var SC_USER = {
-  name: 'lofisoul',
-  id: 63317612
-};
 
 /***/ }),
 
