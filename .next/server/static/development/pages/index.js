@@ -352,7 +352,6 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "componentDidMount", () => {
-      console.log("41aceb0d516e657897a0eb7ab22c9f99");
       SC.initialize({
         client_id: "41aceb0d516e657897a0eb7ab22c9f99",
         redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html'
@@ -390,7 +389,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139,
+        lineNumber: 138,
         columnNumber: 20
       }
     }), __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -402,7 +401,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140,
+        lineNumber: 139,
         columnNumber: 5
       }
     }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -410,21 +409,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147,
+        lineNumber: 146,
         columnNumber: 13
       }
     }) : '', isFetching ? __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149,
+        lineNumber: 148,
         columnNumber: 6
       }
     }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152,
+        lineNumber: 151,
         columnNumber: 7
       }
     }, fiveTracks ? fiveTracks.map(track => {
@@ -432,7 +431,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156,
+          lineNumber: 155,
           columnNumber: 12
         }
       }, __jsx("p", {
@@ -440,21 +439,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157,
+          lineNumber: 156,
           columnNumber: 13
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158,
+          lineNumber: 157,
           columnNumber: 14
         }
       }, track.user.username), __jsx("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161,
+          lineNumber: 160,
           columnNumber: 14
         }
       }), ": ", track.title), __jsx("iframe", {
@@ -467,7 +466,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163,
+          lineNumber: 162,
           columnNumber: 13
         }
       }));
@@ -475,7 +474,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176,
+        lineNumber: 175,
         columnNumber: 7
       }
     }, randomTracksFromUsers ? randomTracksFromUsers.map(item => {
@@ -484,35 +483,35 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180,
+          lineNumber: 179,
           columnNumber: 12
         }
       }, __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181,
+          lineNumber: 180,
           columnNumber: 13
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182,
+          lineNumber: 181,
           columnNumber: 14
         }
       }, "User:"), ' ', item.user.username), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185,
+          lineNumber: 184,
           columnNumber: 13
         }
       }, "Song: ", item.track.title), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186,
+          lineNumber: 185,
           columnNumber: 13
         }
       }, "Referral:", ' ', item.referral.title), __jsx("iframe", {
@@ -525,7 +524,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190,
+          lineNumber: 189,
           columnNumber: 13
         }
       }));
