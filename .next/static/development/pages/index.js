@@ -153,7 +153,7 @@ var FetchUser = function FetchUser(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
@@ -168,8 +168,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SCPlayer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SCPlayer */ "./components/SCPlayer.js");
 /* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
 
 
 
@@ -184,7 +183,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 function _createSuper(Derived) { return function () { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
 
 
 
@@ -294,7 +292,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
             case 3:
               response = _context3.sent;
-              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
+              sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
 
               _context3.next = 7;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Promise.all(sortedTracks.map(function _callee2(item) {
@@ -355,7 +353,7 @@ var SCList = /*#__PURE__*/function (_Component) {
               }); //sort users without playlists
               //TODO::need to figure out a way to filter out user
 
-              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+              randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
 
               _context4.next = 8;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(SC.get("/users/".concat(randomUser.id, "/favorites"), {
@@ -365,7 +363,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
             case 8:
               userFaves = _context4.sent;
-              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_14__["shuffle"])(userFaves.collection, 1)[0];
+              randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_13__["shuffle"])(userFaves.collection, 1)[0];
               randomObj = {
                 referral: track,
                 user: randomUser,
@@ -383,7 +381,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 
     Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "componentDidMount", function () {
       SC.initialize({
-        client_id: _config__WEBPACK_IMPORTED_MODULE_13__["scAppId"],
+        client_id: process.env.SC_ID,
         redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html'
       });
     });
@@ -423,7 +421,7 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139,
+          lineNumber: 138,
           columnNumber: 20
         }
       }), __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -435,7 +433,7 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140,
+          lineNumber: 139,
           columnNumber: 5
         }
       }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -443,21 +441,21 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147,
+          lineNumber: 146,
           columnNumber: 13
         }
       }) : '', isFetching ? __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149,
+          lineNumber: 148,
           columnNumber: 6
         }
       }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152,
+          lineNumber: 151,
           columnNumber: 7
         }
       }, fiveTracks ? fiveTracks.map(function (track) {
@@ -465,7 +463,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 156,
+            lineNumber: 155,
             columnNumber: 12
           }
         }, __jsx("p", {
@@ -473,21 +471,21 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 157,
+            lineNumber: 156,
             columnNumber: 13
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 158,
+            lineNumber: 157,
             columnNumber: 14
           }
         }, track.user.username), __jsx("br", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 161,
+            lineNumber: 160,
             columnNumber: 14
           }
         }), ": ", track.title), __jsx("iframe", {
@@ -500,7 +498,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 163,
+            lineNumber: 162,
             columnNumber: 13
           }
         }));
@@ -508,7 +506,7 @@ var SCList = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176,
+          lineNumber: 175,
           columnNumber: 7
         }
       }, randomTracksFromUsers ? randomTracksFromUsers.map(function (item) {
@@ -517,35 +515,35 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 180,
+            lineNumber: 179,
             columnNumber: 12
           }
         }, __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 181,
+            lineNumber: 180,
             columnNumber: 13
           }
         }, __jsx("strong", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 182,
+            lineNumber: 181,
             columnNumber: 14
           }
         }, "User:"), ' ', item.user.username), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 185,
+            lineNumber: 184,
             columnNumber: 13
           }
         }, "Song: ", item.track.title), __jsx("p", {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 186,
+            lineNumber: 185,
             columnNumber: 13
           }
         }, "Referral:", ' ', item.referral.title), __jsx("iframe", {
@@ -558,7 +556,7 @@ var SCList = /*#__PURE__*/function (_Component) {
           __self: _this2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 190,
+            lineNumber: 189,
             columnNumber: 13
           }
         }));
@@ -570,6 +568,7 @@ var SCList = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (SCList);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -726,25 +725,6 @@ var Modal = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withCo
   return props.isModalOpen ? "scale(1)" : "scale(1.1)";
 });
 /* harmony default export */ __webpack_exports__["default"] = (Modal);
-
-/***/ }),
-
-/***/ "./config.js":
-/*!*******************!*\
-  !*** ./config.js ***!
-  \*******************/
-/*! exports provided: scAppId, scUser */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scAppId", function() { return scAppId; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scUser", function() { return scUser; });
-var scAppId = '41aceb0d516e657897a0eb7ab22c9f99';
-var scUser = {
-  name: 'lofisoul',
-  id: 63317612
-};
 
 /***/ }),
 
@@ -5158,7 +5138,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjasonnolfi%2Flofisoul%2Fpages%2Findex.js ***!
   \********************************************************************************************************************/
@@ -5181,5 +5161,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

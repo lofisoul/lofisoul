@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -249,13 +249,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SCPlayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SCPlayer */ "./components/SCPlayer.js");
 /* harmony import */ var _FetchUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FetchUser */ "./components/FetchUser.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/utils */ "./lib/utils.js");
 var _jsxFileName = "/Users/jasonnolfi/lofisoul/components/SCList.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -316,7 +314,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         limit: 1000,
         linked_partitioning: 1
       });
-      const sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
+      const sortedTracks = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(response.collection, 5); //run logic for getting random song based on users that liked 5 sorted tracks
 
       let randomPlaylist = await Promise.all(sortedTracks.map(async item => {
         let newItem = await this.generateRandomPlaylist(item);
@@ -338,13 +336,13 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       const arrayUsersFaves = userArr.filter(user => user.public_favorites_count > 0); //sort users without playlists
       //TODO::need to figure out a way to filter out user
 
-      let randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
+      let randomUser = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(arrayUsersFaves, 1)[0]; //get first list of random users
 
       const userFaves = await SC.get(`/users/${randomUser.id}/favorites`, {
         limit: 1000,
         linked_partitioning: 1
       });
-      const randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_6__["shuffle"])(userFaves.collection, 1)[0];
+      const randomTrack = Object(_lib_utils__WEBPACK_IMPORTED_MODULE_5__["shuffle"])(userFaves.collection, 1)[0];
       const randomObj = {
         referral: track,
         user: randomUser,
@@ -355,7 +353,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "componentDidMount", () => {
       SC.initialize({
-        client_id: _config__WEBPACK_IMPORTED_MODULE_5__["scAppId"],
+        client_id: process.env.SC_ID,
         redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html'
       });
     });
@@ -391,7 +389,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139,
+        lineNumber: 138,
         columnNumber: 20
       }
     }), __jsx(_FetchUser__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -403,7 +401,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140,
+        lineNumber: 139,
         columnNumber: 5
       }
     }), user ? __jsx(_User__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -411,21 +409,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147,
+        lineNumber: 146,
         columnNumber: 13
       }
     }) : '', isFetching ? __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149,
+        lineNumber: 148,
         columnNumber: 6
       }
     }, "Fetching...") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152,
+        lineNumber: 151,
         columnNumber: 7
       }
     }, fiveTracks ? fiveTracks.map(track => {
@@ -433,7 +431,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156,
+          lineNumber: 155,
           columnNumber: 12
         }
       }, __jsx("p", {
@@ -441,21 +439,21 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157,
+          lineNumber: 156,
           columnNumber: 13
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158,
+          lineNumber: 157,
           columnNumber: 14
         }
       }, track.user.username), __jsx("br", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161,
+          lineNumber: 160,
           columnNumber: 14
         }
       }), ": ", track.title), __jsx("iframe", {
@@ -468,7 +466,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163,
+          lineNumber: 162,
           columnNumber: 13
         }
       }));
@@ -476,7 +474,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176,
+        lineNumber: 175,
         columnNumber: 7
       }
     }, randomTracksFromUsers ? randomTracksFromUsers.map(item => {
@@ -485,35 +483,35 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180,
+          lineNumber: 179,
           columnNumber: 12
         }
       }, __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181,
+          lineNumber: 180,
           columnNumber: 13
         }
       }, __jsx("strong", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182,
+          lineNumber: 181,
           columnNumber: 14
         }
       }, "User:"), ' ', item.user.username), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185,
+          lineNumber: 184,
           columnNumber: 13
         }
       }, "Song: ", item.track.title), __jsx("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186,
+          lineNumber: 185,
           columnNumber: 13
         }
       }, "Referral:", ' ', item.referral.title), __jsx("iframe", {
@@ -526,7 +524,7 @@ class SCList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190,
+          lineNumber: 189,
           columnNumber: 13
         }
       }));
@@ -670,25 +668,6 @@ const Modal = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withC
 
 /***/ }),
 
-/***/ "./config.js":
-/*!*******************!*\
-  !*** ./config.js ***!
-  \*******************/
-/*! exports provided: scAppId, scUser */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scAppId", function() { return scAppId; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scUser", function() { return scUser; });
-const scAppId = '41aceb0d516e657897a0eb7ab22c9f99';
-const scUser = {
-  name: 'lofisoul',
-  id: 63317612
-};
-
-/***/ }),
-
 /***/ "./lib/utils.js":
 /*!**********************!*\
   !*** ./lib/utils.js ***!
@@ -747,7 +726,7 @@ const Home = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, 
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
