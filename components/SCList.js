@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SCPlayer from './SCPlayer';
 import FetchUser from './FetchUser';
 import User from './User';
+import {SC_ID} from '../sc-config';
 import {shuffle} from '../lib/utils';
 
 class SCList extends Component {
@@ -117,6 +118,7 @@ class SCList extends Component {
 	};
 
 	componentDidMount = () => {
+		console.log(process.env.SC_ID);
 		SC.initialize({
 			client_id: process.env.SC_ID,
 			redirect_uri: 'http://jambox.thatdudeartoo.com/callback.html',
